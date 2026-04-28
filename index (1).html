@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Doors 2026 · Universidad Panamericana GDL</title>
+<meta name="description" content="Concurso Open Doors 2026 — Facultad de Ingenierías, Universidad Panamericana Guadalajara. Tiro Parabólico y Resistencia de Puentes. Gana becas y conoce la UP.">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --up-blue:#003087;
+  --up-gold:#C8960C;
+  --up-light:#E8F0FB;
+  --accent:#F4A800;
+  --dark:#0A0E1A;
+  --text:#1a1a2e;
+  --muted:#6b7280;
+  --white:#ffffff;
+}
+body{font-family:'DM Sans',sans-serif;color:var(--text);background:#fff;overflow-x:hidden}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 3rem;display:flex;justify-content:space-between;align-items:center;backdrop-filter:blur(12px);background:rgba(255,255,255,0.9);border-bottom:1px solid rgba(0,48,135,0.08)}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.nav-logo-box{width:36px;height:36px;background:var(--up-blue);border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Syne',sans-serif;font-weight:800;font-size:14px}
+.nav-brand{font-family:'Syne',sans-serif;font-weight:700;font-size:15px;color:var(--up-blue)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:14px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--up-blue)}
+.nav-cta{background:var(--up-blue);color:#fff;padding:.5rem 1.25rem;border-radius:50px;text-decoration:none;font-size:13px;font-weight:500;transition:background .2s}
+.nav-cta:hover{background:#00256b}
+
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:7rem 3rem 3rem;background:linear-gradient(135deg,#f0f4ff 0%,#fff 50%,#fffbf0 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(0,48,135,0.06) 0%,transparent 70%)}
+.hero::after{content:'';position:absolute;bottom:-80px;left:200px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(200,150,12,0.08) 0%,transparent 70%)}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(0,48,135,0.08);border:1px solid rgba(0,48,135,0.15);border-radius:50px;padding:.35rem 1rem;font-size:12px;font-weight:500;color:var(--up-blue);margin-bottom:1.5rem;letter-spacing:.5px}
+.hero-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--up-gold);display:inline-block;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
+.hero-title{font-family:'Syne',sans-serif;font-size:clamp(2.5rem,5vw,4.2rem);font-weight:800;line-height:1.05;color:var(--up-blue);margin-bottom:1rem}
+.hero-title span{color:var(--up-gold);display:block}
+.hero-sub{font-size:1.1rem;color:var(--muted);line-height:1.7;max-width:480px;margin-bottom:2rem;font-weight:300}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.btn-primary{background:var(--up-blue);color:#fff;padding:.85rem 2rem;border-radius:50px;text-decoration:none;font-weight:500;font-size:15px;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+.btn-primary:hover{background:#00256b;transform:translateY(-2px)}
+.btn-secondary{border:1.5px solid var(--up-blue);color:var(--up-blue);padding:.85rem 2rem;border-radius:50px;text-decoration:none;font-weight:500;font-size:15px;transition:all .2s}
+.btn-secondary:hover{background:var(--up-light)}
+.hero-visual{display:flex;justify-content:center;align-items:center;position:relative;z-index:1}
+.hero-card{background:#fff;border-radius:24px;padding:2rem;box-shadow:0 20px 80px rgba(0,48,135,.15);width:100%;max-width:360px;border:1px solid rgba(0,48,135,0.08)}
+.hero-card-header{display:flex;align-items:center;gap:12px;margin-bottom:1.5rem}
+.hch-icon{width:48px;height:48px;background:var(--up-blue);border-radius:12px;display:flex;align-items:center;justify-content:center}
+.hch-icon svg{width:24px;height:24px;fill:#fff}
+.hch-text h3{font-family:'Syne',sans-serif;font-weight:700;font-size:16px;color:var(--up-blue)}
+.hch-text p{font-size:12px;color:var(--muted)}
+.date-badge{background:var(--up-light);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1rem;display:flex;gap:12px;align-items:center}
+.date-badge .icon{font-size:20px}
+.date-badge .info strong{display:block;font-size:14px;font-weight:500;color:var(--up-blue)}
+.date-badge .info span{font-size:12px;color:var(--muted)}
+.stat-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.stat-mini{background:#f8faff;border-radius:10px;padding:.75rem;text-align:center}
+.stat-mini strong{display:block;font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--up-blue)}
+.stat-mini span{font-size:10px;color:var(--muted);font-weight:500}
+
+.section{padding:5rem 3rem}
+.section-label{font-size:11px;letter-spacing:2px;font-weight:600;color:var(--up-gold);text-transform:uppercase;margin-bottom:.5rem}
+.section-title{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3vw,2.8rem);font-weight:800;color:var(--up-blue);margin-bottom:.75rem}
+.section-sub{color:var(--muted);font-size:1rem;line-height:1.6;max-width:560px}
+.section-header{margin-bottom:3rem}
+.contests-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem}
+.contest-card{border-radius:20px;padding:2rem;position:relative;overflow:hidden;cursor:pointer;transition:transform .3s,box-shadow .3s;text-decoration:none;display:block}
+.contest-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(0,0,0,.12)}
+.contest-card.blue{background:linear-gradient(135deg,var(--up-blue),#1a4dae);color:#fff}
+.contest-card.gold{background:linear-gradient(135deg,#8B6914,var(--up-gold));color:#fff}
+.contest-icon{width:52px;height:52px;background:rgba(255,255,255,0.15);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;font-size:24px}
+.contest-card h3{font-family:'Syne',sans-serif;font-size:1.35rem;font-weight:800;margin-bottom:.5rem}
+.contest-card p{font-size:.875rem;opacity:.85;line-height:1.5;margin-bottom:1.25rem}
+.contest-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.2);border-radius:50px;padding:.3rem .85rem;font-size:11px;font-weight:600;letter-spacing:.5px}
+.arrow{margin-left:auto;width:32px;height:32px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;position:absolute;bottom:1.75rem;right:1.75rem;font-size:16px}
+
+.carreras-section{background:#f8faff;padding:5rem 3rem}
+.carreras-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:2rem}
+.carrera-card{background:#fff;border-radius:16px;padding:1.5rem;border:1px solid rgba(0,48,135,0.08);transition:all .25s;cursor:pointer}
+.carrera-card:hover{border-color:var(--up-blue);box-shadow:0 8px 30px rgba(0,48,135,.1);transform:translateY(-3px)}
+.carrera-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:1rem}
+.carrera-card h4{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;color:var(--up-blue);line-height:1.3;margin-bottom:.4rem}
+.carrera-card p{font-size:.8rem;color:var(--muted);line-height:1.5}
+.carrera-link{font-size:.75rem;color:var(--up-gold);font-weight:600;margin-top:.75rem;display:inline-flex;align-items:center;gap:4px;text-decoration:none}
+
+.registro-section{padding:5rem 3rem;background:linear-gradient(135deg,var(--up-blue) 0%,#1a3fa0 100%);position:relative;overflow:hidden}
+.registro-section::before{content:'';position:absolute;top:-50%;right:-10%;width:500px;height:500px;border-radius:50%;background:rgba(255,255,255,0.04)}
+.registro-section::after{content:'';position:absolute;bottom:-50%;left:-5%;width:400px;height:400px;border-radius:50%;background:rgba(200,150,12,0.1)}
+.registro-inner{max-width:700px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.registro-inner .section-label{color:var(--accent)}
+.registro-inner .section-title{color:#fff}
+.registro-inner .section-sub{color:rgba(255,255,255,.75);margin:0 auto 2.5rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-input{width:100%;padding:.85rem 1.1rem;border-radius:12px;border:1.5px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.1);color:#fff;font-family:'DM Sans',sans-serif;font-size:14px;outline:none;transition:border .2s;backdrop-filter:blur(8px)}
+.form-input::placeholder{color:rgba(255,255,255,.55)}
+.form-input:focus{border-color:var(--accent)}
+.form-select{width:100%;padding:.85rem 1.1rem;border-radius:12px;border:1.5px solid rgba(255,255,255,0.2);background:rgba(30,60,150,0.8);color:#fff;font-family:'DM Sans',sans-serif;font-size:14px;outline:none;cursor:pointer;margin-bottom:1rem}
+.form-select option{background:#003087;color:#fff}
+.btn-submit{width:100%;padding:1rem;background:var(--accent);color:var(--up-blue);border:none;border-radius:12px;font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;cursor:pointer;transition:all .2s;margin-top:.5rem}
+.btn-submit:hover{background:#ffc107;transform:translateY(-2px)}
+
+.promotores-section{padding:5rem 3rem}
+.promotores-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2rem}
+.promotor-card{background:#fff;border-radius:20px;padding:1.75rem;border:1px solid rgba(0,48,135,0.08);text-align:center;transition:all .25s}
+.promotor-card:hover{box-shadow:0 12px 40px rgba(0,48,135,.1);transform:translateY(-4px)}
+.promotor-avatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--up-blue),#1a4dae);display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Syne',sans-serif;font-weight:800;font-size:18px;margin:0 auto 1rem}
+.promotor-card h4{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;color:var(--up-blue);margin-bottom:.25rem}
+.promotor-card .tags{font-size:.75rem;color:var(--muted);line-height:1.5;margin-bottom:1rem}
+.promotor-links{display:flex;gap:.5rem;justify-content:center}
+.plink{padding:.4rem .9rem;border-radius:50px;font-size:.75rem;font-weight:600;text-decoration:none;transition:all .2s}
+.plink.wa{background:#25D366;color:#fff}
+.plink.mail{background:var(--up-light);color:var(--up-blue)}
+.plink:hover{opacity:.85;transform:scale(1.05)}
+
+footer{background:var(--dark);color:rgba(255,255,255,.7);padding:3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:2rem}
+.footer-brand h4{font-family:'Syne',sans-serif;color:#fff;font-weight:800;margin-bottom:.25rem}
+.footer-brand p{font-size:.8rem;max-width:300px;line-height:1.5}
+.footer-social{display:flex;gap:.75rem}
+.soc-link{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;font-size:14px;transition:background .2s}
+.soc-link:hover{background:var(--up-blue)}
+
+.fade-in{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.fade-in.visible{opacity:1;transform:none}
+
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr;padding:6rem 1.5rem 3rem}
+  .hero-visual{display:none}
+  .nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  .section,.carreras-section,.promotores-section{padding:3rem 1.5rem}
+  .contests-grid{grid-template-columns:1fr}
+  .promotores-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  footer{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">
+    <div class="nav-logo-box">UP</div>
+    <span class="nav-brand">Open Doors 2026</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#concursos">Concursos</a></li>
+    <li><a href="#carreras">Carreras</a></li>
+    <li><a href="#registro">Registro</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <a href="#registro" class="nav-cta">Inscríbete →</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-tag">Universidad Panamericana · Guadalajara</div>
+    <h1 class="hero-title">Open<br><span>Doors</span>2026</h1>
+    <p class="hero-sub">Pondrás en práctica tus conocimientos de física y matemáticas, conocerás la UP por dentro y podrás ganar increíbles becas. ¿Te animas?</p>
+    <div class="hero-actions">
+      <a href="#registro" class="btn-primary">Regístrate gratis →</a>
+      <a href="#concursos" class="btn-secondary">Ver concursos</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-card">
+      <div class="hero-card-header">
+        <div class="hch-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 7L2 14l10 5 10-5-10-5z"/></svg>
+        </div>
+        <div class="hch-text">
+          <h3>Concurso Open Doors</h3>
+          <p>Ingeniería y Arquitectura · UP GDL</p>
+        </div>
+      </div>
+      <div class="date-badge">
+        <span class="icon">📅</span>
+        <div class="info">
+          <strong>Noviembre 2026</strong>
+          <span>Álvaro del Portillo No. 49, Zapopan</span>
+        </div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-mini"><strong>7</strong><span>Carreras</span></div>
+        <div class="stat-mini"><strong>2</strong><span>Concursos</span></div>
+        <div class="stat-mini"><strong>🏆</strong><span>Becas</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="concursos">
+  <div class="section-header fade-in">
+    <p class="section-label">Competencias</p>
+    <h2 class="section-title">Los concursos</h2>
+    <p class="section-sub">Dos retos donde demostrarás que puedes pensar como ingeniero antes de ser uno.</p>
+  </div>
+  <div class="contests-grid fade-in">
+    <a class="contest-card blue" href="https://concursoopendoors.up.edu.mx/concurso-tiro-parabolico/" target="_blank">
+      <div class="contest-icon">🎯</div>
+      <h3>Tiro Parabólico</h3>
+      <p>Diseña y ejecuta un mecanismo de lanzamiento aplicando física y cálculo. Precisión, ingenio y trabajo en equipo.</p>
+      <span class="contest-tag">FÍSICA APLICADA</span>
+      <div class="arrow">→</div>
+    </a>
+    <a class="contest-card gold" href="https://concursoopendoors.up.edu.mx/concurso-resistencia-de-puentes/" target="_blank">
+      <div class="contest-icon">🌉</div>
+      <h3>Resistencia de Puentes</h3>
+      <p>Construye una estructura resistente con materiales básicos. Pondrás a prueba tu intuición estructural y creatividad.</p>
+      <span class="contest-tag">INGENIERÍA CIVIL</span>
+      <div class="arrow">→</div>
+    </a>
+  </div>
+</section>
+
+<section class="carreras-section" id="carreras">
+  <div class="section-header fade-in">
+    <p class="section-label">Oferta académica</p>
+    <h2 class="section-title">Elige tu camino</h2>
+    <p class="section-sub">La Facultad de Ingenierías de la UP Guadalajara ofrece 7 carreras únicas. Open Doors es tu primera mirada a cada una.</p>
+  </div>
+  <div class="carreras-grid fade-in">
+    <div class="carrera-card">
+      <div class="carrera-icon" style="background:#e8f0fb">🏭</div>
+      <h4>Ingeniería Industrial e Innovación de Negocios</h4>
+      <p>Optimiza procesos, gestiona proyectos y lidera organizaciones con visión global.</p>
+      <a class="carrera-link" href="https://movil.up.edu.mx/gdl/ingenieria-industrial-e-innovacion-de-negocios" target="_blank">Ver carrera →</a>
+    </div>
+    <div class="carrera-card">
+      <div class="carrera-icon" style="background:#fff3e0">🏗️</div>
+      <h4>Ingeniería Civil y Administración</h4>
+      <p>Diseña y construye infraestructura que transforma ciudades y comunidades.</p>
+      <a class="carrera-link" href="https://movil.up.edu.mx/gdl/ingenieria-civil-y-administracion" target="_blank">Ver carrera →</a>
+    </div>
+    <div class="carrera-card">
+      <div class="carrera-icon" style="background:#f3e5f5">💡</div>
+      <h4>Ingeniería en Innovación y Diseño</h4>
+      <p>Une creatividad con tecnología para crear productos que impactan el mundo real.</p>
+      <a class="carrera-link" href="https://movil.up.edu.mx/gdl/ingenieria-en-innovacion-y-diseno" target="_blank">Ver carrera →</a>
+    </div>
+    <div class="carrera-card">
+      <div class="carrera-icon" style="background:#e8f5e9">🏛️</div>
+      <h4>Arquitectura</h4>
+      <p>Proyecta espacios que combinan función, estética y sustentabilidad.</p>
+      <a class="carrera-link" href="https://movil.up.edu.mx/gdl/licenciatura-en-arquitectura" target="_blank">Ver carrera →</a>
+    </div>
+    <div class="carrera-card">
+      <div class="carrera-icon" style="background:#fce4ec">🤖</div>
+      <h4>Ingeniería Mecatrónica</h4>
+      <p>Integra mecánica, electrónica e informática para crear sistemas inteligentes.</p>
+      <a class="carrera-link" href="https://movil.up.edu.mx/gdl/ingenieria-mecatronica" target="_blank">Ver carrera →</a>
+    </div>
+    <div class="carrera-card">
+      <div class="carrera-icon" style="background:#e3f2fd">🎮</div>
+      <h4>Ingeniería en Animación y Videojuegos</h4>
+      <p>Desarrolla experiencias digitales inmersivas con tecnología de punta.</p>
+      <a class="carrera-link" href="https://movil.up.edu.mx/gdl/ingenieria-en-animacion-digital" target="_blank">Ver carrera →</a>
+    </div>
+    <div class="carrera-card">
+      <div class="carrera-icon" style="background:#e8eaf6">💻</div>
+      <h4>Computer Science Engineering</h4>
+      <p>Resuelve problemas complejos con algoritmos, IA y sistemas de software avanzados.</p>
+      <a class="carrera-link" href="https://movil.up.edu.mx/gdl/ingenieria-en-sistemas-y-graficas-computacionales" target="_blank">Ver carrera →</a>
+    </div>
+  </div>
+</section>
+
+<section class="registro-section" id="registro">
+  <div class="registro-inner fade-in">
+    <p class="section-label">Inscripciones abiertas</p>
+    <h2 class="section-title" style="color:#fff;margin-bottom:.75rem">¿Listo para el reto?</h2>
+    <p class="section-sub">Regístrate y asegura tu lugar. Es gratis y podrás ganar becas para tu carrera universitaria.</p>
+    <form onsubmit="handleSubmit(event)">
+      <div class="form-row">
+        <input class="form-input" type="text" placeholder="Nombre completo" required>
+        <input class="form-input" type="email" placeholder="Correo electrónico" required>
+      </div>
+      <div class="form-row">
+        <input class="form-input" type="text" placeholder="Nombre de tu prepa" required>
+        <input class="form-input" type="text" placeholder="Teléfono / WhatsApp" required>
+      </div>
+      <select class="form-select" required>
+        <option value="" disabled selected>Selecciona el concurso de tu interés</option>
+        <option>Tiro Parabólico</option>
+        <option>Resistencia de Puentes</option>
+        <option>Ambos (explorar)</option>
+      </select>
+      <select class="form-select">
+        <option value="" disabled selected>Carrera de tu interés (opcional)</option>
+        <option>Ingeniería Industrial e Innovación de Negocios</option>
+        <option>Ingeniería Civil y Administración</option>
+        <option>Ingeniería en Innovación y Diseño</option>
+        <option>Arquitectura</option>
+        <option>Ingeniería Mecatrónica</option>
+        <option>Ingeniería en Animación y Videojuegos</option>
+        <option>Computer Science Engineering</option>
+        <option>Aún no lo sé</option>
+      </select>
+      <button type="submit" class="btn-submit">¡Me apunto! →</button>
+    </form>
+  </div>
+</section>
+
+<section class="promotores-section" id="contacto">
+  <div class="section-header fade-in">
+    <p class="section-label">Tu equipo UP</p>
+    <h2 class="section-title">Contáctanos directamente</h2>
+    <p class="section-sub">Nuestros promotores están listos para resolver tus dudas sobre carreras, becas y el evento.</p>
+  </div>
+  <div class="promotores-grid fade-in">
+    <div class="promotor-card">
+      <div class="promotor-avatar">KC</div>
+      <h4>Kathia Castellanos</h4>
+      <div class="tags">Industrial e Innovación de Negocios<br>Computer Science Engineering</div>
+      <div class="promotor-links">
+        <a class="plink wa" href="https://wa.me/523318504104" target="_blank">WhatsApp</a>
+        <a class="plink mail" href="mailto:pcastellanos@up.edu.mx">Correo</a>
+      </div>
+    </div>
+    <div class="promotor-card">
+      <div class="promotor-avatar">BC</div>
+      <h4>Braulio Castro</h4>
+      <div class="tags">Mecatrónica · Innovación y Diseño<br>Animación y Videojuegos</div>
+      <div class="promotor-links">
+        <a class="plink wa" href="https://wa.me/523323385569" target="_blank">WhatsApp</a>
+        <a class="plink mail" href="mailto:bcastroa@up.edu.mx">Correo</a>
+      </div>
+    </div>
+    <div class="promotor-card">
+      <div class="promotor-avatar">LL</div>
+      <h4>Luis David Lepe</h4>
+      <div class="tags">Civil y Administración<br>Arquitectura</div>
+      <div class="promotor-links">
+        <a class="plink wa" href="https://wa.me/523316068334" target="_blank">WhatsApp</a>
+        <a class="plink mail" href="mailto:llepe@up.edu.mx">Correo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">
+    <h4>Open Doors 2026 · UP GDL</h4>
+    <p>Álvaro del Portillo No. 49, Ciudad Granja CP 45010, Zapopan, Jalisco</p>
+    <p style="margin-top:.5rem;font-size:.78rem">📞 +52 33 1368 2200 &nbsp;·&nbsp; 📧 admisionesgdl@up.edu.mx</p>
+  </div>
+  <div>
+    <p style="font-size:.78rem;margin-bottom:.75rem;opacity:.5">Síguenos</p>
+    <div class="footer-social">
+      <a class="soc-link" href="https://www.facebook.com/UPGdl" target="_blank">f</a>
+      <a class="soc-link" href="https://instagram.com/ingenierias_upgdl" target="_blank">ig</a>
+      <a class="soc-link" href="https://twitter.com/upgdl" target="_blank">tw</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const fades = document.querySelectorAll('.fade-in');
+const obs = new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible')}})},{threshold:.15});
+fades.forEach(el=>obs.observe(el));
+
+function handleSubmit(e){
+  e.preventDefault();
+  const btn = e.target.querySelector('.btn-submit');
+  btn.textContent = '✅ ¡Registro recibido!';
+  btn.style.background='#4caf50';
+  btn.style.color='#fff';
+  setTimeout(()=>{btn.textContent='¡Me apunto! →';btn.style.background='';btn.style.color='';},3000);
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
